@@ -1,0 +1,51 @@
+{
+  "name": "jekyll-post-creator",
+  "displayName": "Jekyll Post Creator",
+  "description": "Create Jekyll post markdown files with proper frontmatter formatting",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "jekyll-post-creator.createPost",
+        "title": "Jekyll: Create New Post"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "jekyll-post-creator.createPost",
+          "group": "jekyll"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "eslint": "^8.40.0",
+    "vsce": "^2.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/jekyll-post-creator"
+  },
+  "keywords": [
+    "jekyll",
+    "blog",
+    "markdown",
+    "post"
+  ],
+  "publisher": "your-publisher-name"
+}
