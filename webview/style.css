@@ -30,6 +30,7 @@ select {
     margin-bottom: 15px;
     border: 1px solid var(--vscode-input-border, #ccc);
     background-color: var(--vscode-input-background, #fff);
+    border-radius: 5px;
     color: var(--vscode-input-foreground, #000);
     box-sizing: border-box;
 }
@@ -70,6 +71,7 @@ button:hover {
     align-items: center;
     margin-bottom: 10px;
     gap: 5px;
+    flex-wrap: wrap;
 }
 
 .custom-field input[type="text"] {
@@ -87,7 +89,6 @@ button:hover {
 #customFieldsContainer {
     margin-bottom: 15px;
     padding-top: 10px;
-    border-top: 1px solid var(--vscode-divider-background, #ccc);
 }
 
 h1 {
@@ -114,9 +115,5 @@ hr {
 
 input.error {
     border-color: var(--vscode-inputValidation-errorBorder, red) !important;
+    background-color: var(--vscode-inputValidation-errorBackground, #f8d7da) !important;
 }
-
-/* Ensure main content area can grow but doesn't force scrollbars unnecessarily */
-/* (Not strictly needed for this simple layout, but good practice) */
-/* For example, if you had a main content div: */
-/* .main-content { flex-grow: 1; } */ 
