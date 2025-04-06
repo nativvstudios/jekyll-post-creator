@@ -1,0 +1,122 @@
+/* Styles using VS Code theme variables */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    font-family: var(--vscode-font-family, Arial, sans-serif);
+    color: var(--vscode-editor-foreground);
+    background-color: var(--vscode-editor-background);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--vscode-input-border, #ccc);
+    background-color: var(--vscode-input-background, #fff);
+    color: var(--vscode-input-foreground, #000);
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: var(--vscode-focusBorder);
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-right: 5px;
+    border: 1px solid var(--vscode-button-border, transparent);
+    background-color: var(--vscode-button-background, #007acc);
+    color: var(--vscode-button-foreground, #fff);
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--vscode-button-hoverBackground, #005a9e);
+}
+
+#addOptionBtn,
+.custom-field button {
+    background-color: var(--vscode-button-secondaryBackground, #5f6a79);
+    color: var(--vscode-button-secondaryForeground, #fff);
+}
+
+#addOptionBtn:hover,
+.custom-field button:hover {
+    background-color: var(--vscode-button-secondaryHoverBackground, #4c5561);
+}
+
+.custom-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+
+.custom-field input[type="text"] {
+    flex-grow: 1;
+    margin-bottom: 0;
+    width: auto;
+}
+
+.custom-field button {
+    padding: 5px 8px;
+    min-width: 30px;
+    flex-shrink: 0;
+}
+
+#customFieldsContainer {
+    margin-bottom: 15px;
+    padding-top: 10px;
+    border-top: 1px solid var(--vscode-divider-background, #ccc);
+}
+
+h1 {
+    border-bottom: 1px solid var(--vscode-divider-background, #ccc);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    border-bottom: 1px solid var(--vscode-divider-background, #ccc);
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid var(--vscode-divider-background, #ccc);
+}
+
+input.error {
+    border-color: var(--vscode-inputValidation-errorBorder, red) !important;
+}
+
+/* Ensure main content area can grow but doesn't force scrollbars unnecessarily */
+/* (Not strictly needed for this simple layout, but good practice) */
+/* For example, if you had a main content div: */
+/* .main-content { flex-grow: 1; } */ 
