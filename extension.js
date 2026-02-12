@@ -145,7 +145,11 @@ async function createJekyllPost(postDetails) {
     }
 
     const date = new Date();
-    const dateStr = date.toISOString().split('T')[0];
+
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const dateStr = `${year}-${month}-${day}`;
     const filename = `${dateStr}-${postTitle.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '')}.md`;
     const formattedDate = date.toLocaleString('en-US', {
         year: 'numeric', month: '2-digit', day: '2-digit',
@@ -184,9 +188,9 @@ async function createJekyllPost(postDetails) {
             formattedValue = 'null';
         } else {
             try {
-                 formattedValue = JSON.stringify(value);
+                formattedValue = JSON.stringify(value);
             } catch (e) {
-                 formattedValue = `"${String(value).replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
+                formattedValue = `"${String(value).replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
             }
         }
         frontMatterLines.push(`${safeKey}: ${formattedValue}`);
